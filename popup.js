@@ -10,11 +10,11 @@ document.getElementById("superFocus").onclick = function (event) {
     chrome.storage.local.set({ youtube_state: 3 });
 }
 document.getElementById("focused").onclick = function (event) {
-    document.getElementById("currentMode").innerHTML = getCurrentState(3);
+    document.getElementById("currentMode").innerHTML = getCurrentState(2);
     chrome.storage.local.set({ youtube_state: 2 });
 }
 document.getElementById("normal").onclick = function (event) {
-    document.getElementById("currentMode").innerHTML = getCurrentState(3);
+    document.getElementById("currentMode").innerHTML = getCurrentState(1);
     chrome.storage.local.set({ youtube_state: 1 });
 }
 
