@@ -1,0 +1,41 @@
+{
+    "name": "FocTube",
+    "description": "This extension helps in focusing while using Youtube.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": "f2.png"
+    },
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "background_script.js"
+        ]
+    },
+    "permissions": [
+        "storage",
+        "webNavigation",
+        "activeTab",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "run_at": "document_start",
+            "all_frames": true,
+            "js": [
+                "jquery-3.5.0.slim.min.js",
+                "focTube-main.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "f2.png",
+        "32": "f2.png",
+        "48": "f2.png",
+        "128": "f2.png"
+    }
+}
